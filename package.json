@@ -1,0 +1,36 @@
+{
+	"name": "Laxmikant SauceDemo Checkout Spike test",
+	"version": "1.0.1",
+	"scripts": {
+		"prettier": "prettier --write --loglevel warn \"**/**/*.ts\"",
+		"test": "npm run prettier && wdio",
+		"dev": "npm run prettier && wdio --spec",
+		"clean-report": "rimraf allure-results",
+		"generate-report": "allure generate allure-results/ --clean && allure open -p 8000",
+		"report": "npm run clean-report && npm run test ; npm run run-report"
+	},
+	"keywords": [ "webdriverio", "typescript" ],
+	"devDependencies": {
+		"@types/chai": "^4.2.12",
+		"@types/mocha": "^5.2.7",
+		"@types/node": "^10.14.19",
+		"@wdio/allure-reporter": "^6.3.6",
+		"@wdio/cli": "^6.3.5",
+		"@wdio/local-runner": "^6.3.5",
+		"@wdio/mocha-framework": "^6.3.0",
+		"@wdio/selenium-standalone-service": "^6.1.14",
+		"@wdio/spec-reporter": "^6.3.0",
+		"@wdio/sync": "^6.3.3",
+		"allure-commandline": "^2.13.0",
+		"chai": "^4.2.0",
+		"prettier": "^1.18.2",
+		"rimraf": "^3.0.2",
+		"ts-node": "^8.10.2",
+		"tsconfig-paths": "^3.9.0",
+		"typescript": "^3.6.3",
+		"webdriverio": "^6.3.6"
+	},
+	"engines": {
+		"node": ">=7.6.0"
+	}
+}

@@ -1,0 +1,7 @@
+errorShots/*
+node_modules
+# Reports section
+allure-report
+allure-results
+.history
+.vscode
